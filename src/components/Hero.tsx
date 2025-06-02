@@ -16,17 +16,23 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3"
+            asChild
           >
-            <Icon name="Phone" size={20} />
-            Узнать стоимость
+            <a href="tel:+79688901002">
+              <Icon name="Phone" size={20} />
+              Узнать стоимость
+            </a>
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3"
+            asChild
           >
-            <Icon name="Calculator" size={20} />
-            Рассчитать цену
+            <a href="https://wa.me/+79688901002">
+              <Icon name="MessageCircle" size={20} />
+              WhatsApp
+            </a>
           </Button>
         </div>
       </div>

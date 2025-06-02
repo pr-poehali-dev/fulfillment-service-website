@@ -19,17 +19,24 @@ const CTA = () => {
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 px-8 py-3"
+                asChild
               >
-                <Icon name="Phone" size={20} />
-                Позвонить нам
+                <a href="tel:+79688901002">
+                  <Icon name="Phone" size={20} />
+                  Позвонить нам
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3">
-                <Icon name="Mail" size={20} />
-                Написать письмо
+              <Button variant="outline" size="lg" className="px-8 py-3" asChild>
+                <a href="https://wa.me/+79688901002">
+                  <Icon name="MessageCircle" size={20} />
+                  WhatsApp
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3">
-                <Icon name="MessageCircle" size={20} />
-                Telegram чат
+              <Button variant="outline" size="lg" className="px-8 py-3" asChild>
+                <a href="https://t.me/best_shoping">
+                  <Icon name="Send" size={20} />
+                  Telegram чат
+                </a>
               </Button>
             </div>
             <div className="mt-8 pt-6 border-t border-gray-200">
