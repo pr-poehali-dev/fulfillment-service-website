@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const Benefits = () => {
   const benefits = [
     {
-      icon: "DollarSign",
+      icon: "Ruble",
       title: "Низкие цены",
       description:
         "Конкурентная стоимость услуг — экономьте на логистике до 40%",
