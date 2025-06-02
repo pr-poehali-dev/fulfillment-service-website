@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import Geography from "@/components/Geography";
+import Gallery from "@/components/Gallery";
 import CTA from "@/components/CTA";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <Benefits />
       <Services />
       <Geography />
+      <Gallery />
       <CTA />
     </div>
   );

@@ -26,13 +26,23 @@ const CTA = () => {
                   Позвонить нам
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
+                asChild
+              >
                 <a href="https://wa.me/+79688901002">
                   <Icon name="MessageCircle" size={20} />
                   WhatsApp
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc] hover:text-white"
+                asChild
+              >
                 <a href="https://t.me/best_shoping">
                   <Icon name="Send" size={20} />
                   Telegram чат
