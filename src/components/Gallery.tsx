@@ -3,17 +3,17 @@ import { Card, CardContent } from "@/components/ui/card";
 const Gallery = () => {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+      url: "https://cdn.poehali.dev/files/41674f9a-5530-49b8-9f53-1463a5e0d3bc.jpg",
       title: "Склад с товарами",
       description: "Современное складское оборудование",
     },
     {
-      url: "https://images.unsplash.com/photo-1553652618-de6239a63500?w=500",
+      url: "https://cdn.poehali.dev/files/0498dd2f-04a8-41da-ae49-5ade434c7494.jpg",
       title: "Упаковка товаров",
       description: "Профессиональная упаковка для маркетплейсов",
     },
     {
-      url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500",
+      url: "https://cdn.poehali.dev/files/9738c1cc-c1e4-40e8-a4f1-69e333fa01b5.jpg",
       title: "Доставка",
       description: "Быстрая отгрузка на склады",
     },
