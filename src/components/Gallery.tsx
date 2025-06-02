@@ -1,21 +1,38 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Gallery = () => {
   const images = [
     {
-      url: "https://cdn.poehali.dev/files/41674f9a-5530-49b8-9f53-1463a5e0d3bc.jpg",
-      title: "Склад с товарами",
-      description: "Современное складское оборудование",
-    },
-    {
-      url: "https://cdn.poehali.dev/files/0498dd2f-04a8-41da-ae49-5ade434c7494.jpg",
+      url: "https://cdn.poehali.dev/files/487cd19b-bf46-4da1-8684-2104d3413fb6.jpg",
       title: "Упаковка товаров",
       description: "Профессиональная упаковка для маркетплейсов",
     },
     {
-      url: "https://cdn.poehali.dev/files/9738c1cc-c1e4-40e8-a4f1-69e333fa01b5.jpg",
-      title: "Доставка",
-      description: "Быстрая отгрузка на склады",
+      url: "https://cdn.poehali.dev/files/89fd2c6a-bd8b-44ef-8032-e379eb12c6ab.jpg",
+      title: "Складская логистика",
+      description: "Организация и хранение товаров",
+    },
+    {
+      url: "https://cdn.poehali.dev/files/79e98387-b799-4029-8a5a-30308753f014.jpg",
+      title: "Подготовка к отгрузке",
+      description: "Контроль качества перед отправкой",
+    },
+    {
+      url: "https://cdn.poehali.dev/files/fdab3e31-29ef-4d99-8f00-ff6dccb68191.jpg",
+      title: "Работа с товарами",
+      description: "Профессиональная обработка заказов",
+    },
+    {
+      url: "https://cdn.poehali.dev/files/cbc5a9cd-baf2-4ecf-bbd2-eb569a90ca31.jpg",
+      title: "Упаковочное оборудование",
+      description: "Современные технологии упаковки",
     },
   ];
 
@@ -31,25 +48,32 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {images.map((image, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <CardContent className="p-0">
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold mb-2">{image.title}</h3>
-                  <p className="text-sm text-gray-600">{image.description}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <CardContent className="p-0">
+                      <img
+                        src={image.url}
+                        alt={image.title}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4">
+                        <h3 className="font-semibold mb-2">{image.title}</h3>
+                        <p className="text-sm text-gray-600">
+                          {image.description}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>

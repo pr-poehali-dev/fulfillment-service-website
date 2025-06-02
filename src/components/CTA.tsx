@@ -50,6 +50,9 @@ const CTA = () => {
               </Button>
             </div>
             <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-500 mb-2">
+                📍 Москва, ул. Сормовский проезд 7а К2
+              </p>
               <p className="text-sm text-gray-500">
                 Работаем ежедневно с 9:00 до 21:00 | Быстрый ответ в течение
                 часа
