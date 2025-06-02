@@ -6,11 +6,12 @@ const Hero = () => {
     <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl font-bold mb-6 font-montserrat">
-          Фулфилмент услуги для маркетплейсов
+          Фулфилмент услуги для маркетплейсов Wildberries и Ozon
         </h1>
         <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-          Забираем товар от поставщика, проводим весь цикл обработки и отгружаем
-          на склады маркетплейсов. Низкие цены — наше главное преимущество!
+          Профессиональный фулфилмент: забираем товар от поставщика, проводим
+          полный цикл обработки и отгружаем на склады маркетплейсов. Складские
+          услуги с экономией до 40%!
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
           <Button
