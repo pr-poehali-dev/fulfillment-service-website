@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Geography = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const locations = [
     { name: "Садовод", type: "Рынок", city: "Москва" },
     { name: "Люблино", type: "Рынок", city: "Москва" },
@@ -16,31 +18,32 @@ const Geography = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section ref={ref} className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 font-montserrat">
+        <h2 className={`text-4xl font-bold text-center mb-6 font-montserrat text-primary transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           География работы
         </h2>
-        <div className="mb-8 text-center">
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className={`mb-12 text-center transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Забираем товар с крупнейших торговых площадок и логистических
             центров
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {locations.map((location, index) => (
             <Card
               key={index}
-              className="text-center hover:shadow-lg transition-shadow"
+              className={`text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <CardHeader>
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <Icon name="MapPin" size={24} className="text-blue-600" />
+                <div className="bg-gradient-to-br from-blue-100 to-blue-200 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-md group-hover:scale-110 transition-transform">
+                  <Icon name="MapPin" size={28} className="text-primary" />
                 </div>
-                <CardTitle className="text-lg">{location.name}</CardTitle>
+                <CardTitle className="text-lg font-bold text-primary">{location.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-green-600 font-medium">{location.type}</p>
+                <p className="text-secondary font-semibold">{location.type}</p>
                 <p className="text-gray-500 text-sm">{location.city}</p>
               </CardContent>
             </Card>

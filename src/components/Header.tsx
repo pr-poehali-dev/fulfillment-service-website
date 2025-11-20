@@ -3,12 +3,12 @@ import Icon from "@/components/ui/icon";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
-      <div className="container mx-auto px-4 py-3">
+    <header className="bg-white/95 backdrop-blur-sm shadow-md border-b-2 border-primary/10 sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Логотип/Название */}
           <div className="flex items-center">
-            <h2 className="text-2xl font-bold text-blue-800 font-montserrat">
+            <h2 className="text-2xl font-bold text-primary font-montserrat hover:scale-105 transition-transform cursor-default">
               ФулфилментПро
             </h2>
           </div>
@@ -18,7 +18,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-gray-700 hover:text-blue-800"
+              className="text-gray-700 hover:text-primary hover:bg-primary/5 transition-all"
               asChild
             >
               <a href="tel:+79688901002" className="flex items-center gap-2">
@@ -30,7 +30,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-[#25D366] hover:bg-[#25D366] hover:text-white"
+              className="text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all"
               asChild
             >
               <a
@@ -45,7 +45,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-[#0088cc] hover:bg-[#0088cc] hover:text-white"
+              className="text-[#0088cc] hover:bg-[#0088cc] hover:text-white transition-all"
               asChild
             >
               <a
